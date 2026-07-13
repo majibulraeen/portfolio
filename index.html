@@ -28,18 +28,17 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-        </script>
-        <script type="text/javascript">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
         (function(){
-    emailjs.init({
-        publicKey: "2mc7y9vxFPSufvWCp",
-        });
-    })();
+            emailjs.init({
+                publicKey: "2mc7y9vxFPSufvWCp",
+            });
+        })();
     </script>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap & Font Dependencies -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -54,10 +53,10 @@
     </div>
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Majibul <span>Raeen</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="menu">
@@ -74,87 +73,128 @@
     </nav>
 
     <!-- HERO -->
-    <section id="home-section" class="hero-carousel">
-        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            </div>
-            <div class="carousel-inner">
+    <section id="home-section" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                
+                <!-- Left Text Column -->
+                <div class="col-lg-6 hero-text" data-aos="fade-right">
+                    <div class="status-badge">
+                        <span class="ping-dot"></span>
+                        Available for NOC Transfer / Qatar
+                    </div>
+                    <span class="hero-subtitle">IT Support Specialist & Data Analyst</span>
+                    <h1>Hi, I'm <br><span>Majibul Raeen</span></h1>
+                    <p class="hero-description">
+                        An Information Technology Engineer & Web Developer. I build secure, high-performance web applications and design robust IT infrastructure, CCTV networks, access controls, and technical operations.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="cv/Majibul_CV_Done.pdf" class="btn btn-premium btn-premium-primary" download>
+                            Download CV <i class="bi bi-download"></i>
+                        </a>
+                        <a href="#contact-section" class="btn btn-premium btn-premium-secondary">
+                            Let's Talk <i class="bi bi-chat-dots"></i>
+                        </a>
+                    </div>
+                </div>
 
-                <!-- Slide 1 -->
-                <div class="carousel-item active" style="background-image:url('images/LogoMJ.png');">
-                    <div class="overlay"></div>
-                    <div class="container h-100">
-                        <div class="row h-100 align-items-center">
-                            <div class="col-lg-7 hero-text">
-                                <p class="hero-subtitle">Hello! This is Majibul Raeen</p>
-                                <h1>An <span>Information Technology</span> Engineer & Web Developer</h1>
-                                <p class="hero-description">I develop web applications and provide IT solutions including software development, database management, CCTV systems and technical support.</p>
-                                <div class="hero-buttons">
-                                    <a href="cv/Majibul_CV_Done.pdf" class="btn btn-warning hero-btn" download>Download CV</a>
-                                    <a href="#contact-section" class="btn btn-outline-light hero-btn">Contact Me</a>
-                                </div>
+                <!-- Right Code Column (Developer dashboard mock) -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="code-dashboard">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span class="code-dot red"></span>
+                                <span class="code-dot yellow"></span>
+                                <span class="code-dot green"></span>
+                            </div>
+                            <div class="code-title">majeeb_profile.php</div>
+                            <div style="width: 50px;"></div>
+                        </div>
+                        <div class="code-body">
+                            <div class="code-line">
+                                <span class="code-num">1</span>
+                                <span class="code-content"><span class="keyword">&lt;?php</span></span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-num">2</span>
+                                <span class="code-content"><span class="keyword">class</span> <span class="class">ITEngineer</span> {</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-num">3</span>
+                                <span class="code-content">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span> <span class="variable">$name</span> = <span class="string">"Majibul Raeen"</span>;</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-num">4</span>
+                                <span class="code-content">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span> <span class="variable">$visaStatus</span> = <span class="string">"Transferable with NOC"</span>;</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-num">5</span>
+                                <span class="code-content">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span> <span class="variable">$location</span> = <span class="string">"Doha, Qatar"</span>;</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-num">6</span>
+                                <span class="code-content">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span> <span class="variable">$experience</span> = <span class="string">"IT Infrastructure & Web"</span>;</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-num">7</span>
+                                <span class="code-content">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span> <span class="variable">$coreSkills</span> = [</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-num">8</span>
+                                <span class="code-content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"PHP / Laravel"</span>, <span class="string">"MySQL"</span>, <span class="string">"JavaScript"</span>,</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-num">9</span>
+                                <span class="code-content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"IT Infrastructure"</span>, <span class="string">"CCTV & Access Control"</span></span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-num">10</span>
+                                <span class="code-content">&nbsp;&nbsp;&nbsp;&nbsp;];</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-num">11</span>
+                                <span class="code-content">}</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-num">12</span>
+                                <span class="code-content"><span class="comment">// Always learning, always building</span></span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-num">13</span>
+                                <span class="code-content"><span class="variable">$majeeb</span> = <span class="keyword">new</span> <span class="class">ITEngineer</span>();</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Slide 2 -->
-                <div class="carousel-item" style="background-image:url('images/LogoMJ.png');">
-                    <div class="overlay"></div>
-                    <div class="container h-100">
-                        <div class="row h-100 align-items-center">
-                            <div class="col-lg-7 hero-text">
-                                <p class="hero-subtitle">IT Support Specialist & Data Analyst</p>
-                                <h1>Hi, I am <span>Majibul Raeen</span></h1>
-                                <p class="hero-description">Experienced in programming, networking, database systems, CCTV installation, access control and IT support.</p>
-                                <div class="hero-buttons">
-                                    <a href="#contact-section" class="btn btn-primary hero-btn">Let's Work Together</a>
-                                    <a href="#projects-section" class="btn btn-outline-light hero-btn">View Projects</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
     </section>
 
     <!-- STATS -->
     <section class="stats-section" data-aos="fade-up">
         <div class="container">
-            <div class="row">
+            <div class="row g-4">
                 <div class="col-md-3 col-6">
-                    <div class="stats-item">
+                    <div class="stats-card glass-panel">
                         <span class="stats-number" data-target="1">0</span>
                         <span class="stats-label">Years Experience</span>
                     </div>
                 </div>
                 <div class="col-md-3 col-6">
-                    <div class="stats-item">
+                    <div class="stats-card glass-panel">
                         <span class="stats-number" data-target="30">0</span>
                         <span class="stats-label">Projects Completed</span>
                     </div>
                 </div>
                 <div class="col-md-3 col-6">
-                    <div class="stats-item">
+                    <div class="stats-card glass-panel">
                         <span class="stats-number" data-target="100">0</span>
                         <span class="stats-label">Happy Clients</span>
                     </div>
                 </div>
                 <div class="col-md-3 col-6">
-                    <div class="stats-item">
+                    <div class="stats-card glass-panel">
                         <span class="stats-number" data-target="10">0</span>
                         <span class="stats-label">Certifications</span>
                     </div>
@@ -164,64 +204,76 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about-section" class="py-5 bg-light" data-aos="fade-up">
-        <div class="container">
+    <section id="about-section" class="py-5" style="background-color: var(--bg-sec);">
+        <div class="container py-5">
             <div class="row align-items-center g-5">
 
                 <!-- Profile Image -->
-                <div class="col-lg-5 col-md-6" data-aos="fade-right">
-                    <div class="about-image">
-                        <img src="images/maj.png" class="img-fluid rounded-4 shadow-lg w-100" alt="Majibul Raeen">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="about-image-wrapper">
+                        <img src="images/maj.png" class="img-fluid rounded-4 shadow-lg w-100" style="border: 1px solid rgba(255,255,255,0.06);" alt="Majibul Raeen">
                     </div>
                 </div>
 
                 <!-- About Content -->
-                <div class="col-lg-7 col-md-6" data-aos="fade-left">
-                    <div class="about-content">
-                        <span class="text-success fw-bold text-uppercase">My Intro</span>
-                        <h2 class="display-5 fw-bold mt-2 mb-4">About Me</h2>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <span class="section-tag">My Intro</span>
+                    <h2 class="section-title">About <span>Me</span></h2>
+                    
+                    <p class="text-details mb-4">
+                        I am a detail-oriented IT Engineer with a solid background in software development and technical project management. I possess strong analytical and problem-solving abilities to deliver high-quality results from concept to production.
+                    </p>
+                    <p class="text-muted mb-5">
+                        Whether designing server-side PHP scripts, managing SQL databases, configuring networks, or troubleshooting complex IT problems, I approach every challenge with dedication, positivity, and a commitment to successful outcomes.
+                    </p>
 
-                        <p class="text-muted">
-                            Detail-oriented IT Engineer with a solid background in software development
-                            and project management, from conception to completion. Skilled in using
-                            strong problem-solving abilities to deliver high-quality results.
-                        </p>
-                        <p class="text-muted">
-                            Never lose hope in difficult situations and remain motivated, positive,
-                            and committed to achieving successful outcomes.
-                        </p>
-
-                        <!-- Personal Information -->
-                        <ul class="list-unstyled about-info mt-4">
-                            <li><strong>Name:</strong> <span>Majibul Raeen</span></li>
-                            <li><strong>Date of birth:</strong> <span>October 19, 1995</span></li>
-                            <li><strong>Address:</strong> <span>Doha, Qatar, Sanaya-43</span></li>
-                            <li><strong>Email:</strong> <span>majibul444@gmail.com</span></li>
-                            <li><strong>Phone:</strong> <span>+974-77233140</span></li>
-                            <li><strong>Nationality:</strong> <span>Nepalese</span></li>
-                            <li><strong>Visa Status:</strong> <span>Transferable Visa with NOC</span></li>
-                        </ul>
-
-                        <!-- Interests -->
-                        <h3 class="fw-bold mt-5 mb-4">Likes</h3>
-                        <div class="row g-3">
-                            <div class="col-md-4">
-                                <div class="interest-box">
-                                    <i class="bi bi-airplane"></i>
-                                    <span>Travel</span>
-                                </div>
+                    <!-- Personal Information Grid -->
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="about-info-badge">
+                                <h5>Full Name</h5>
+                                <p>Majibul Raeen</p>
                             </div>
-                            <div class="col-md-4">
-                                <div class="interest-box">
-                                    <i class="bi bi-film"></i>
-                                    <span>Movie</span>
-                                </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="about-info-badge">
+                                <h5>Birth Date</h5>
+                                <p>October 19, 1995</p>
                             </div>
-                            <div class="col-md-4">
-                                <div class="interest-box">
-                                    <i class="bi bi-trophy"></i>
-                                    <span>Sports</span>
-                                </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="about-info-badge">
+                                <h5>Location</h5>
+                                <p>Doha, Qatar</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="about-info-badge">
+                                <h5>Nationality</h5>
+                                <p>Nepalese</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interests -->
+                    <h3 class="fw-bold mb-4" style="font-size: 20px; letter-spacing: -0.5px;">Interests</h3>
+                    <div class="row g-3">
+                        <div class="col-4">
+                            <div class="interest-card">
+                                <i class="bi bi-airplane"></i>
+                                <span>Travel</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="interest-card">
+                                <i class="bi bi-film"></i>
+                                <span>Movies</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="interest-card">
+                                <i class="bi bi-trophy"></i>
+                                <span>Sports</span>
                             </div>
                         </div>
                     </div>
@@ -232,208 +284,229 @@
     </section>
 
     <!-- SKILLS -->
-    <section id="skills-section" class="py-5 bg-light" data-aos="fade-up">
-        <div class="container">
+    <section id="skills-section" class="py-5">
+        <div class="container py-5">
 
             <!-- Section Heading -->
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10 text-center">
-                    <span class="text-success fw-bold text-uppercase">Skills</span>
-                    <h2 class="display-5 fw-bold mt-2 mb-4">My Skills</h2>
+            <div class="row justify-content-center mb-5 text-center">
+                <div class="col-lg-8">
+                    <span class="section-tag">Skills</span>
+                    <h2 class="section-title">Technical <span>Capacities</span></h2>
                     <p class="text-muted">
-                        I have worked with PHP, MySQL, HTML, CSS, JavaScript, Java, Python and Bootstrap
-                        to build web applications and software. I also have experience in IT Support,
-                        Technical Troubleshooting, Database Design, Software Testing, Windows Environment,
-                        SDLC, Microsoft Office and Technical Documentation. I am always willing to learn
-                        new technologies and improve my skills.
+                        A solid foundation in application development paired with direct engineering experience in hardware systems, IT Operations, and enterprise networking.
                     </p>
                 </div>
             </div>
 
-            <!-- Skills Progress Bars -->
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="skill-card">
-                        <div class="d-flex justify-content-between mb-2">
-                            <h6>PHP</h6><span>95%</span>
+            <!-- Skills Progress Grid -->
+            <div class="row g-4">
+                
+                <!-- Category 1: Development -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="skills-card glass-panel">
+                        <h4 class="skills-category-title"><i class="bi bi-code-slash"></i> Software Development</h4>
+                        
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <h6>HTML / CSS & Bootstrap</h6>
+                                <span>98%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:98%"></div>
+                            </div>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:95%"></div>
+                        
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <h6>PHP & Backend Scripting</h6>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:95%"></div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="skill-card">
-                        <div class="d-flex justify-content-between mb-2">
-                            <h6>HTML / CSS</h6><span>98%</span>
+                        
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <h6>MySQL & Database Systems</h6>
+                                <span>92%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:92%"></div>
+                            </div>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:98%"></div>
+
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <h6>JavaScript & Web Logic</h6>
+                                <span>88%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:88%"></div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="skill-card">
-                        <div class="d-flex justify-content-between mb-2">
-                            <h6>Java</h6><span>85%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:85%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="skill-card">
-                        <div class="d-flex justify-content-between mb-2">
-                            <h6>IT Support & Help Desk</h6><span>95%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:95%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="skill-card">
-                        <div class="d-flex justify-content-between mb-2">
-                            <h6>Technical Troubleshooting</h6><span>84%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:84%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="skill-card">
-                        <div class="d-flex justify-content-between mb-2">
-                            <h6>Microsoft Office</h6><span>90%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:90%"></div>
+                        
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <h6>Java Desktop & Python</h6>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:80%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="skill-card">
-                        <div class="d-flex justify-content-between mb-2">
-                            <h6>JavaScript</h6><span>88%</span>
+
+                <!-- Category 2: IT Operations -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="skills-card glass-panel">
+                        <h4 class="skills-category-title"><i class="bi bi-cpu"></i> Systems & IT Support</h4>
+                        
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <h6>IT Support & Help Desk Operations</h6>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:95%"></div>
+                            </div>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:88%"></div>
+                        
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <h6>Technical System Troubleshooting</h6>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <h6>CCTV, Access Control & Networks</h6>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <h6>Microsoft Office Suite</h6>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <h6>Windows/Server Administration</h6>
+                                <span>82%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:82%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="skill-card">
-                        <div class="d-flex justify-content-between mb-2">
-                            <h6>MySQL Database</h6><span>92%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:92%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="skill-card">
-                        <div class="d-flex justify-content-between mb-2">
-                            <h6>Bootstrap</h6><span>90%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:90%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="skill-card">
-                        <div class="d-flex justify-content-between mb-2">
-                            <h6>Python</h6><span>75%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:75%"></div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
 
         </div>
     </section>
 
     <!-- SERVICES -->
-    <section id="services-section" class="py-5 bg-light" data-aos="fade-up">
-        <div class="container">
+    <section id="services-section" class="py-5" style="background-color: var(--bg-sec);">
+        <div class="container py-5">
 
             <!-- Section Heading -->
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10 text-center">
-                    <span class="text-success fw-bold text-uppercase">I am gratified to</span>
-                    <h2 class="display-5 fw-bold mt-3 mb-4">Provide awesome services for my clients</h2>
+            <div class="row justify-content-center mb-5 text-center">
+                <div class="col-lg-8">
+                    <span class="section-tag">Services</span>
+                    <h2 class="section-title">Core <span>Competencies</span></h2>
                     <p class="text-muted">
-                        I offer professional web development, IT support, technical troubleshooting,
-                        and Microsoft Office services. With experience in PHP, HTML, Java, and modern
-                        web technologies, I build reliable websites, solve technical problems, and
-                        provide efficient IT solutions for individuals and businesses. My goal is to
-                        deliver quality work that is simple, effective, and tailored to each client's
-                        requirements.
+                        Providing comprehensive digital design and system operations to businesses looking for secure, reliable solutions.
                     </p>
                 </div>
             </div>
 
-            <!-- Services Cards -->
+            <!-- Services Cards Grid -->
             <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
+                
+                <!-- Web Design -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-card">
-                        <div class="service-icon"><i class="bi bi-cast"></i></div>
+                        <div class="service-icon"><i class="bi bi-window"></i></div>
                         <h3>Web Design</h3>
-                        <p>I create clean and responsive web pages using HTML. I ensure that websites have a well-structured layout and work properly across different devices and screen sizes.</p>
+                        <p>I design clean, structured, and fully responsive layouts. Ensuring a flawless UX and navigation across mobile devices, tablets, and desktop displays.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+
+                <!-- Web Application -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-card">
-                        <div class="service-icon"><i class="bi bi-code-slash"></i></div>
+                        <div class="service-icon"><i class="bi bi-braces"></i></div>
                         <h3>Web Application</h3>
-                        <p>I develop dynamic and secure web applications using PHP. I build custom websites, management systems, login systems, and database-driven applications that are fast and reliable.</p>
+                        <p>Development of fast, dynamic, and database-driven web systems using PHP. Built with focus on security, clean data structures, and optimal request speed.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+
+                <!-- Java Development -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-card">
-                        <div class="service-icon"><i class="bi bi-cup-hot"></i></div>
+                        <div class="service-icon"><i class="bi bi-box-seam"></i></div>
                         <h3>Java Development</h3>
-                        <p>I develop desktop applications and software solutions using Java. I create efficient and user-friendly applications following good programming practices.</p>
+                        <p>Creating robust desktop tools and cross-platform desktop applications tailored to process administration tasks and custom desktop workflows.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+
+                <!-- IT Support -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-card">
-                        <div class="service-icon"><i class="bi bi-pc-display"></i></div>
-                        <h3>IT Support & Help Desk</h3>
-                        <p>I provide IT support for computers, software, and network issues. I install, configure, troubleshoot, and maintain systems to keep businesses running smoothly.</p>
+                        <div class="service-icon"><i class="bi bi-hdd-network"></i></div>
+                        <h3>IT Support & Operations</h3>
+                        <p>Providing direct diagnostic diagnostics on operating systems, local hardware configurations, networks, routers, access point setups, and firewalls.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+
+                <!-- Technical Troubleshooting -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
                     <div class="service-card">
-                        <div class="service-icon"><i class="bi bi-tools"></i></div>
-                        <h3>Technical Troubleshooting</h3>
-                        <p>I identify and solve technical problems related to computers, software, and hardware. I provide reliable solutions to minimize downtime.</p>
+                        <div class="service-icon"><i class="bi bi-shield-check"></i></div>
+                        <h3>System Troubleshooting</h3>
+                        <p>Expert diagnostic troubleshooting of software faults, database issues, network outages, and surveillance systems (CCTV, DVR) to minimize operational downtime.</p>
                     </div>
                 </div>
+
             </div>
 
         </div>
     </section>
 
     <!-- HIRE CTA -->
-    <section id="hire-section" class="py-5" data-aos="fade-up">
-        <div class="container">
-            <div class="row align-items-center hire-box">
-                <div class="col-lg-8 col-md-7">
-                    <div class="hire-content">
-                        <span class="text-danger fw-bold text-uppercase">Let's Work Together</span>
-                        <h2 class="display-5 fw-bold mt-3 mb-4">Have a project on your mind?</h2>
-                        <p>With my experience in PHP, MySQL, HTML, CSS, JavaScript, Java and database management, I can help you create a website and computer software that represents your work, skills, and brand in a professional way.</p>
-                        <a href="#contact-section" class="btn btn-success px-4 py-3 mt-3">Contact Me</a>
+    <section id="hire-section" class="py-5">
+        <div class="container py-5">
+            <div class="hire-box" data-aos="zoom-in">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-8">
+                        <div class="hire-content">
+                            <span class="text-danger fw-bold text-uppercase" style="letter-spacing: 1px;">Collaboration</span>
+                            <h2>Have a project in mind?</h2>
+                            <p>
+                                I am fully prepared to leverage my engineering capabilities to design clean, secure, and modern web applications or configure complex office IT networks. Let's discuss your targets.
+                            </p>
+                            <a href="#contact-section" class="btn btn-premium btn-premium-primary mt-3">Contact Me <i class="bi bi-arrow-right-short"></i></a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-5 text-center">
-                    <div class="hire-image">
-                        <img src="images/Profile1.png" class="img-fluid" alt="Profile">
+                    <div class="col-lg-4 text-center">
+                        <div class="hire-image">
+                            <img src="images/Profile1.png" class="img-fluid" alt="Profile">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -441,88 +514,92 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects-section" class="py-5 bg-light" data-aos="fade-up">
-        <div class="container-fluid px-md-5">
+    <section id="projects-section" class="py-5" style="background-color: var(--bg-sec);">
+        <div class="container py-5">
 
             <!-- Section Heading -->
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10 text-center">
-                    <span class="text-success fw-bold text-uppercase">Accomplishments</span>
-                    <h2 class="display-5 fw-bold mt-3 mb-4">My Projects</h2>
+            <div class="row justify-content-center mb-5 text-center">
+                <div class="col-lg-8">
+                    <span class="section-tag">Accomplishments</span>
+                    <h2 class="section-title">My <span>Projects</span></h2>
                     <p class="text-muted">
-                        I have developed and worked on various software and web-based projects focusing
-                        on user-friendly design, database management, and practical problem-solving
-                        solutions. My projects include web applications, management systems,
-                        location-based services, and API integrations using technologies such as PHP,
-                        MySQL, JavaScript, HTML, CSS, .NET and Java.
+                        An overview of custom platforms and tools designed to deliver direct value and clean database-driven features.
                     </p>
                 </div>
             </div>
 
-            <!-- Project Cards -->
+            <!-- Project Cards Grid -->
             <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
+                
+                <!-- Bhakari Shopping -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-card" style="background-image:url('images/ecommerse.JPG');">
                         <div class="project-overlay"></div>
                         <div class="project-content">
-                            <h3><a href="#">E-Commerce</a></h3>
-                            <span>Bhakari Shopping Nepal - A complete online shopping platform with product catalog, shopping cart, payment integration, and order management system built using PHP and MySQL.</span>
+                            <h3><a href="#">Bhakari Shopping</a></h3>
+                            <span>An E-Commerce web system developed with PHP & MySQL. Features products catalogues, functional checkout systems, dynamic cart storage, and admin management options.</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+
+                <!-- Home Services -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-card" style="background-image:url('images/homeservices.png');">
                         <div class="project-overlay"></div>
                         <div class="project-content">
                             <h3><a href="#">Home Services</a></h3>
-                            <span>An Online Service Platform - Connects users with nearby service providers including electricians, plumbers, and technicians using location-based services and real-time booking system.</span>
+                            <span>Real-time location-based provider matching app. Includes provider registration, dynamic distance checks using the Haversine formula, and booking schedules.</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+
+                <!-- Online Quiz -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
                     <div class="project-card" style="background-image:url('images/quizz1.JPG');">
                         <div class="project-overlay"></div>
                         <div class="project-content">
                             <h3><a href="#">Online Quiz</a></h3>
-                            <span>Website Developed in College First Year - An interactive quiz application with multiple choice questions, timer functionality, score calculation, and result display using HTML, CSS, and JavaScript.</span>
+                            <span>An interactive browser-based testing system. Built with modular JS scripts, real-time score tracking, custom question databases, and instant metric assessments.</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+
+                <!-- Movies Theater -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
                     <div class="project-card" style="background-image:url('images/movie.JPG');">
                         <div class="project-overlay"></div>
                         <div class="project-content">
-                            <h3><a href="#">Movies</a></h3>
-                            <span>Developed to Display New Released Movies in Theater - A movie information website featuring latest releases, showtimes, theater locations, and movie details with search and filter functionality.</span>
+                            <h3><a href="#">Movie Release Tracker</a></h3>
+                            <span>A specialized catalog web application showcasing theater times, search-by-genre, user reviews, and map coordinates to regional theaters.</span>
                         </div>
                     </div>
                 </div>
+
             </div>
 
         </div>
     </section>
 
     <!-- BLOG -->
-    <section id="blog-section" class="py-5 bg-light" data-aos="fade-up">
-        <div class="container">
+    <section id="blog-section" class="py-5">
+        <div class="container py-5">
 
             <!-- Section Heading -->
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10 text-center">
-                    <span class="text-success fw-bold text-uppercase">Blog</span>
-                    <h2 class="display-5 fw-bold mt-3 mb-4">My Blog</h2>
+            <div class="row justify-content-center mb-5 text-center">
+                <div class="col-lg-8">
+                    <span class="section-tag">Blog</span>
+                    <h2 class="section-title">Technical <span>Articles</span></h2>
                     <p class="text-muted">
-                        In this blog, I will share my professional journey from learning programming
-                        concepts to working on real-world software projects. I will discuss my experience
-                        in web development, database management, IT support, and system solutions, along
-                        with the challenges and lessons I learned throughout my career.
+                        Sharing real-world field insights, problem solutions, and design choices made during my active engineering workflows.
                     </p>
                 </div>
             </div>
 
-            <!-- Blog Cards -->
+            <!-- Blog Cards Grid -->
             <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
+                
+                <!-- Blog 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="blog-card">
                         <img src="images/work-6.jpg" class="img-fluid" alt="Home Services Application">
                         <div class="blog-content">
@@ -532,11 +609,13 @@
                                 <span><i class="bi bi-chat"></i> 3</span>
                             </div>
                             <h3><a href="single.html">Building a Home Services Web Application Using PHP and MySQL</a></h3>
-                            <p>This blog explains the development of my Home Services Web Application, designed to connect users with nearby service providers. The project uses PHP, MySQL, JavaScript, and the Haversine Algorithm to calculate distance between users and technicians.</p>
+                            <p>An in-depth writeup covering technical strategies for storing geolocation values in MySQL and utilizing distance checks to link service requests to nearby providers.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+
+                <!-- Blog 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="blog-card">
                         <img src="images/work-8.jpg" class="img-fluid" alt="Khalti API Integration">
                         <div class="blog-content">
@@ -546,11 +625,13 @@
                                 <span><i class="bi bi-chat"></i> 3</span>
                             </div>
                             <h3><a href="single.html">Integrating Online Payment Gateway Using Khalti API</a></h3>
-                            <p>This blog describes my experience integrating an online payment gateway into a web application. It explains secure transactions, API communication, payment verification, and improving user experience through digital payment solutions.</p>
+                            <p>Step-by-step documentation regarding the payload structures, authentication patterns, server-to-server validation callbacks, and payment flows.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+
+                <!-- Blog 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="blog-card">
                         <img src="images/work-7.jpg" class="img-fluid" alt="IT Problems">
                         <div class="blog-content">
@@ -560,26 +641,29 @@
                                 <span><i class="bi bi-chat"></i> 3</span>
                             </div>
                             <h3><a href="single.html">Common IT Problems and Practical Solutions</a></h3>
-                            <p>As an IT Support Specialist, I have handled various hardware and software issues. This blog covers common computer problems, troubleshooting methods, system maintenance tips, and ways to improve performance.</p>
+                            <p>An operational checklist of daily network configuration bugs, active server registry errors, hardware replacement procedures, and local DNS troubleshooting steps.</p>
                         </div>
                     </div>
                 </div>
+
             </div>
 
         </div>
     </section>
 
     <!-- TESTIMONIALS -->
-    <section class="testimonials-section" data-aos="fade-up">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center">
-                    <span class="text-success fw-bold text-uppercase">Testimonials</span>
-                    <h2 class="display-5 fw-bold mt-3 mb-4">What Friends Say</h2>
+    <section class="py-5" style="background-color: var(--bg-sec);">
+        <div class="container py-5">
+            <div class="row justify-content-center mb-5 text-center">
+                <div class="col-lg-8">
+                    <span class="section-tag">Testimonials</span>
+                    <h2 class="section-title">What <span>Peers Say</span></h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-4">
+            <div class="row g-4">
+                
+                <!-- Testimonial 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="testimonial-card">
                         <div class="testimonial-content">
                             <div class="testimonial-rating">
@@ -592,14 +676,16 @@
                             <p class="testimonial-text">"Majibul ले हाम्रो वेबसाइट प्रोजेक्टमा उत्कृष्ट काम गरे। धेरै पेशेवर र समयमै काम पूरा गरे। उनको काम धेरै राम्रो छ।"</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="images/raja.JPG" class="testimonial-avatar" alt="Client">
+                            <img src="images/raja.JPG" class="testimonial-avatar" alt="Raja Babu Singh">
                             <div class="testimonial-info">
                                 <h5>Raja Babu Singh</h5>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+
+                <!-- Testimonial 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="testimonial-card">
                         <div class="testimonial-content">
                             <div class="testimonial-rating">
@@ -612,14 +698,16 @@
                             <p class="testimonial-text">"उत्कृष्ट IT समर्थन र प्राविधिक समाधानहरू। कुनै पनि IT आवश्यकताका लागि अत्यधिक सिफारिस गरिन्छ।"</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="images/laxman.JPG" class="testimonial-avatar" alt="Client">
+                            <img src="images/laxman.JPG" class="testimonial-avatar" alt="Laxman Rauth">
                             <div class="testimonial-info">
                                 <h5>Laxman Rauth</h5>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+
+                <!-- Testimonial 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="testimonial-card">
                         <div class="testimonial-content">
                             <div class="testimonial-rating">
@@ -632,104 +720,103 @@
                             <p class="testimonial-text">"पेशेवर वेब विकास सेवाहरू। धेरै प्रतिक्रियाशील र कुशल डेभलपर। उनको कामबाट हामी धेरै खुश छौं।"</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="images/niru.JPG" class="testimonial-avatar" alt="Client">
+                            <img src="images/niru.JPG" class="testimonial-avatar" alt="Nirupama Nayak">
                             <div class="testimonial-info">
                                 <h5>Nirupama Nayak</h5>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact-section" class="py-5 bg-light" data-aos="fade-up">
-        <div class="container">
+    <section id="contact-section" class="py-5">
+        <div class="container py-5">
 
             <!-- Heading -->
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center">
-                    <span class="text-success fw-bold text-uppercase">Contact Us</span>
-                    <h2 class="display-5 fw-bold mt-3 mb-4">Have a Project?</h2>
+            <div class="row justify-content-center mb-5 text-center">
+                <div class="col-lg-8">
+                    <span class="section-tag">Contact Us</span>
+                    <h2 class="section-title">Get In <span>Touch</span></h2>
                     <p class="text-muted">
-                        I believe in understanding client requirements, providing quality solutions,
-                        and building long-term working relationships. Feel free to share your ideas,
-                        and we can discuss how we can work together.
+                        Have a target project or dynamic web development requirements? Drop a note below and I will get back to you promptly.
                     </p>
                 </div>
             </div>
 
             <div class="row g-5">
 
-                <!-- Contact Form -->
-                <div class="col-lg-8">
-                    <form id="contact-form" class="contact-box">
-                        <div class="row g-3">
-
-                            <div class="col-md-6">
-                                <input type="text" id="name" name="name" class="form-control"
-                                placeholder="Your Name" required>
-                            </div>
-
-                            <div class="col-md-6">
-                                <input type="email" id="email" name="email" class="form-control"
-                                placeholder="Your Email" required>
-                            </div>
-
-                            <div class="col-12">
-                                <input type="text" id="subject" name="subject" class="form-control"
-                                placeholder="Subject" required>
-                            </div>
-
-                            <div class="col-12">
-                                <textarea id="message" name="message" rows="7"
-                                class="form-control" placeholder="Message" required></textarea>
-                            </div>
-
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-success px-5 py-3">
-                                    Send Message
-                                </button>
-                            </div>
-
-                        </div>
-
-                    </form>
-                </div>
-
-                <!-- Contact Information -->
-                <div class="col-lg-4">
+                <!-- Contact Information Details -->
+                <div class="col-lg-4" data-aos="fade-right">
                     <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="bi bi-geo-alt"></i>
-                            <div>
+                        
+                        <div class="contact-info-card">
+                            <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
+                            <div class="contact-details">
                                 <h6>Address</h6>
                                 <p>Doha, Qatar, Sanaya-43</p>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="bi bi-telephone"></i>
-                            <div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon"><i class="bi bi-telephone"></i></div>
+                            <div class="contact-details">
                                 <h6>Phone</h6>
                                 <p><a href="tel:+97477233140">+974-77233140</a></p>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="bi bi-envelope"></i>
-                            <div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon"><i class="bi bi-envelope"></i></div>
+                            <div class="contact-details">
                                 <h6>Email</h6>
                                 <p><a href="mailto:majibul444@gmail.com">majibul444@gmail.com</a></p>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="bi bi-globe"></i>
-                            <div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon"><i class="bi bi-globe"></i></div>
+                            <div class="contact-details">
                                 <h6>Website</h6>
-                                <p><a href="#">yoursite.com</a></p>
+                                <p><a href="#">majibulraeen.com</a></p>
                             </div>
                         </div>
+
                     </div>
+                </div>
+
+                <!-- Contact Form Box -->
+                <div class="col-lg-8" data-aos="fade-left">
+                    <form id="contact-form" class="contact-box">
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+
+                            <div class="col-12">
+                                <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
+                            </div>
+
+                            <div class="col-12">
+                                <textarea id="message" name="message" rows="6" class="form-control" placeholder="Message" required></textarea>
+                            </div>
+
+                            <div class="col-12 text-end">
+                                <button type="submit" class="btn btn-premium btn-premium-primary px-5 py-3">
+                                    Send Message <i class="bi bi-send-fill ms-2"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
                 </div>
 
             </div>
@@ -737,18 +824,18 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer-section" data-aos="fade-up">
+    <footer class="footer-section">
         <div class="container">
             <div class="row g-4">
 
-                <!-- About -->
+                <!-- About column -->
                 <div class="col-md-6 col-lg-3">
-                    <h4>Let's talk about</h4>
-                    <p>I am a web developer and IT professional with skills in creating modern, responsive, and user-friendly websites.</p>
-                    <a href="#" class="btn btn-success">Learn More</a>
+                    <h4>Overview</h4>
+                    <p>IT Engineer and web developer focusing on secure solutions, database scripting, networks, and technical services.</p>
+                    <a href="#about-section" class="btn btn-premium btn-premium-secondary py-2 px-3 mt-2" style="font-size: 13px;">Learn More</a>
                 </div>
 
-                <!-- Links -->
+                <!-- Links column -->
                 <div class="col-md-6 col-lg-3">
                     <h4>Links</h4>
                     <ul class="footer-links">
@@ -760,47 +847,52 @@
                     </ul>
                 </div>
 
-                <!-- Services -->
+                <!-- Services column -->
                 <div class="col-md-6 col-lg-3">
                     <h4>Services</h4>
                     <ul class="footer-links">
                         <li><a href="#services-section">Web Design</a></li>
                         <li><a href="#services-section">Web Application</a></li>
                         <li><a href="#services-section">Java Development</a></li>
-                        <li><a href="#services-section">IT Support & Help Desk</a></li>
-                        <li><a href="#services-section">Technical Troubleshooting</a></li>
+                        <li><a href="#services-section">IT Support & Networks</a></li>
+                        <li><a href="#services-section">System Troubleshooting</a></li>
                     </ul>
                 </div>
 
-                <!-- Contact -->
+                <!-- Contact column -->
                 <div class="col-md-6 col-lg-3">
                     <h4>Have Questions?</h4>
                     <p>Doha, Qatar, Sanaya-43</p>
-                    <p><a href="tel:+97477233140">+974-77233140</a></p>
-                    <p><a href="mailto:majibul444@gmail.com">majibul444@gmail.com</a></p>
+                    <p><a href="tel:+97477233140" class="text-muted">+974-77233140</a></p>
+                    <p><a href="mailto:majibul444@gmail.com" class="text-muted">majibul444@gmail.com</a></p>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/majibul.rain.75"><i class="bi bi-facebook"></i></a>
-                        <a href="https://github.com/majibulraeen"><i class="bi bi-github"></i></a>
+                        <a href="https://www.facebook.com/majibul.rain.75" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://github.com/majibulraeen" target="_blank" aria-label="Github"><i class="bi bi-github"></i></a>
                     </div>
                 </div>
 
             </div>
 
-            <hr>
+            <hr style="border-color: rgba(255,255,255,0.08); margin: 40px 0 20px;">
 
             <div class="text-center">
-                <p class="mb-0">Copyright &copy; <script>document.write(new Date().getFullYear());</script> Majibul Raeen</p>
+                <p class="mb-0" style="font-size: 13px; color: var(--text-muted);">
+                    Copyright &copy; <script>document.write(new Date().getFullYear());</script> Majibul Raeen. All rights reserved.
+                </p>
             </div>
         </div>
     </footer>
 
-    <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+    <!-- Elfsight WhatsApp Chat -->
     <script src="https://elfsightcdn.com/platform.js" async></script>
     <div class="elfsight-app-627a06f4-29f5-480a-911b-af2279449199" data-elfsight-app-lazy></div>
+    
     <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">
+    <button id="backToTop" class="back-to-top" aria-label="Back to Top">
         <i class="bi bi-arrow-up"></i>
     </button>
+    
+    <!-- JS Dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/custom.js"></script>
